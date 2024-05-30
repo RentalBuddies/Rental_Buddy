@@ -10,7 +10,8 @@ app.set("views",path.join(__dirname,"views"));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
-app.set("view engine" ," ejs")
+app.set("view engine" ," ejs");
+app.use("/css",express.static("dist"));
 
 
 app.listen("8080",()=>{
@@ -19,5 +20,5 @@ app.listen("8080",()=>{
 
 
 app.get("/",(req,res)=>{
-    res.render("home.ejs");
+    res.render("index.ejs");
 });
