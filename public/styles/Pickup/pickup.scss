@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Rowdies:wght@300;400;700&display=swap');
+
+.hero-section {
+    .text-content div.heading {
+        font-family: "Rowdies", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+
+        span.colourful-span {
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+
+    .pickup {
+        p {
+            font-family: "Rowdies", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+        .heading{
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+        }
+    }
+
+}

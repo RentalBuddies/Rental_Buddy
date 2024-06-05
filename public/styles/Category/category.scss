@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@mixin Oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+$Primary: black;
+$Secondary: #d8ab21;
+
+.vehicle-categories {
+    h1 {
+        font-family: "Alfa Slab One", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .card {
+        p {
+            @include Oswald;
+        }
+
+        button {
+            @include Oswald;
+            transition: 0.3s ease-out;
+        }
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: $Secondary;
+            top: 0px;
+            left: 0px;
+            scale: 0.7;
+            transition: 0.3s ease-out;
+            z-index: -1;
+            opacity: 0;
+        }
+
+        i {
+            transition: 0.3s ease-out
+        }
+
+        &:hover i {
+            color: $Primary;
+        }
+
+        &:hover button {
+            background-color: $Primary;
+        }
+        &:hover:before{
+            scale: 1;
+            opacity: 1;
+        }
+    }
+}

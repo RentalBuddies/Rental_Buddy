@@ -1,0 +1,11 @@
+Model Information:
+* title:	McLaren White with Gold (Free)
+* source:	https://sketchfab.com/3d-models/mclaren-white-with-gold-free-e33808bff0f648f5b496439a7d1499f2
+* author:	SparkyEdit (https://sketchfab.com/SparkyStore)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "McLaren White with Gold (Free)" (https://sketchfab.com/3d-models/mclaren-white-with-gold-free-e33808bff0f648f5b496439a7d1499f2) by SparkyEdit (https://sketchfab.com/SparkyStore) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

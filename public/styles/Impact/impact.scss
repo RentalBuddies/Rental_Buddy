@@ -1,0 +1,15 @@
+.impact {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+            .impact .heading::before {
+                content: "";
+                width: 25%;
+                height: 10px;
+                background-color: var(--theme-color-2);
+                position: absolute;
+                bottom: -30%;
+                left: 45%;
+            }
+}

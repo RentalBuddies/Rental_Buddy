@@ -1,0 +1,16 @@
+.faq-section .gradient {
+
+    background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text;}
+
+.accordion {
+    transition: 0.4s;
+
+    i {
+        transition: 0.2s;
+    }
+}
+
+.panel {
+    transition: max-height 0.2s ease-out;
+}

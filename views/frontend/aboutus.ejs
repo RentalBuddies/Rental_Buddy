@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Buddy</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+        :root {
+            /* --theme-color-1: #49391f; */
+            --theme-color-2: #d8ab21;
+            --theme-color-1: var(--theme-color-2);
+            --category-theme-1: var(--theme-color-2);
+            --category-theme-2: #4b5563;
+        }
+
+        p {
+
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c) no-repeat;
+            -webkit-background-clip: text;
+            background-clip: text;
+            background-size: 0%;
+            transition: background-size cubic-bezier(.1, .5, .5, 1) 0.5s;
+            color: rgb(182, 182, 182, 0.2);
+            position: relative;
+
+            font-size: clamp(1rem, 5vw, 100rem);
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+<!-- font awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- StyleSheets Links -->
+<link rel="stylesheet" href="styles/Navbar/navbar.css">
+
+<body>
+    <nav>
+        <div class="bg-black navContainer w-full relative">
+            <!-- PC Navbar -->
+            <nav
+                class="flex justify-between py-9 px-[5vw] items-center lower text-[color:var(--theme-color-2)] font-extrabold">
+                <!-- Logo -->
+                <div class="logo z-10"><img
+                        src="https://motors.stylemixthemes.com/rent-a-car/wp-content/uploads/sites/7/2017/01/motors_car_rental_logo.svg"
+                        alt="Logo"></div>
+                <!-- Sections for different Pages -->
+                <div class="sections hidden lg:flex gap-[50px]">
+                    <div class="floatingNavElement p-2 relative">
+                        <div class="home section absolute"><a href="index.html">Home</a></div>
+                    </div>
+                    <div class="floatingNavElement p-2 relative">
+                        <div class="Renting section"><a href="Rent.html">Rent</a></div>
+                    </div>
+                    <div class="floatingNavElement p-2 relative">
+                        <div class="Rentable section"><a href="Rentable.html">Rentable</a></div>
+                    </div>
+                    <div class="floatingNavElement p-2 relative">
+                        <div class="contactus section"><a href="contactus.html">Contact</a></div>
+                    </div>
+                    <div class="floatingNavElement p-2 relative">
+                        <div class="AboutUs section"><a href="aboutus.html">About Us</a></div>
+                    </div>
+                </div>
+                <!-- Mobile Number -->
+                <div class="numberg hidden xl:block">
+                    <i
+                        class="fa-solid fa-phone bg-[color:var(--theme-color-2)] mr-2 rounded-full p-3 text-white"></i>878-9671-4455
+                </div>
+                <!-- Hamburger Menu -->
+                <button class="button-three lg:hidden z-30  right-10" aria-controls="primary-navigation"
+                    aria-expanded="false">
+                    <svg stroke="var(--button-color)" fill="none" class="hamburger" viewBox="-10 -10 120 120"
+                        width="50">
+                        <path class="line" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"
+                            d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
+                        </path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </nav>
+    <main>
+        <div class="reveal-text h-[100vh]">
+            <div class="text w-full h-full flex justify-center bg-black items-center flex-col">
+                <p>Meet our Team</p>
+                <p>A group of Innovative friends</p>
+                <p>Learning Something New</p>
+            </div>
+        </div>
+        <div class="container relative">
+            <div id="page1" class="h-screen page bg-black relative flex items-end justify-center w-screen">
+                <div class="bg-[#4f2938] h-[70vh] w-[80vw] rounded-t-3xl z-10 mx-auto">
+                    
+                </div>
+            </div>
+            <div id="page3" class="h-screen page bg-transparent relative flex items-end justify-center w-screen">
+                <div class="bg-[#f9e3] h-[70vh] w-[80vw] rounded-t-3xl z-10 mx-auto">
+                    
+                </div>
+            </div>
+            <div id="page3" class="h-screen page bg-transparent relative flex items-end justify-center w-screen">
+                <div class="bg-[#ffcdb1] h-[70vh] w-[80vw] rounded-t-3xl z-10 mx-auto">
+                    
+                </div>
+
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="Scripts/navbar.js"></script>
+<script>
+    const pages = document.querySelectorAll(".page")
+    options = {
+        root: null,
+        threshold: 0,
+        rootMargin: "0px"
+    };
+    pages.forEach(page => {
+        const observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return
+                } else {
+                    page.style.top = "0px"
+                    page.style.position = "sticky"
+                }
+            })
+        }, options)
+        observer.observe(page.nextElementSibling)
+    })
+
+</script>
+
+<script>
+    const textElements = gsap.utils.toArray('.text p');
+    textElements.forEach(text => {
+        gsap.to(text, {
+            backgroundSize: '100%',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: text,
+                start: 'top 40%',
+                end: 'top 10%',
+                scrub: true,
+            },
+        });
+    });
+</script>
+
+</html>

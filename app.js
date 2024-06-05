@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
 const path = require("path");
+const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
 const Car = require("./models/cars.js");
 const User = require("./models/users.js");
@@ -10,6 +11,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const flash = require('connect-flash');
 const {isLoggedIn} = require("./middleware.js");
+const Details = require("./models/PersonalDetail.js")
 
 // Middleware and settings
 app.set("view engine", "ejs");
@@ -84,7 +86,7 @@ app.post("/signup", async (req, res) => {
         return next(err);
       }
       req.flash("success", "User was registered successfully");
-      res.redirect("/post/home");
+      res.redirect("/home");
     });
   } catch (e) {
     req.flash("error", e.message);
@@ -107,7 +109,34 @@ app.post("/login", passport.authenticate("local", {
 
 //////// ---------------------- //////////
 
-app.get("/home",isLoggedIn,(req, res) => {
-  res.render("index.ejs");
+app.get("/home",(req, res) => {
+  res.render("./frontend/index.ejs");
 });
+
+
+app.get("/rentable",(req ,res)=>{
+  res.render("./frontend/Rentable.ejs");
+});
+
+app.post("/rentable/vehicle",(req,res)=>{
+  let data = req.body;
+  Car.insertMany(data);
+  res.redirect("/home");
+});
+
+app.post("/rentable/driver",(req,res)=>{
+  let data = req.body;
+  Details.insertMany(data);
+  res.redirect("/home");
+});
+
+app.get("/contactUs",(req,res)=>{
+  res.render("./frontend/contactus.ejs");
+});
+
+app.get("/rent",(req,res)=>{
+  res.render("./frontend/Rent.ejs");
+});
+
+
 

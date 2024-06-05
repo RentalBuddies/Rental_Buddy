@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Rowdies:wght@300;400;700&display=swap");
+.Clients h1 {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  word-spacing: 20px;
+}
+
+.Clients .swiper-slide .name {
+  font-family: "Rowdies", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

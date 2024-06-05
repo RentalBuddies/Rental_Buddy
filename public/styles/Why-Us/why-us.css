@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Rowdies:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+.why-us {
+  font-family: "Rowdies", sans-serif;
+  font-style: normal;
+}
+.why-us h1 {
+  font-weight: 300;
+}
+.why-us .point-text {
+  font-family: "Questrial", sans-serif;
+}
+.why-us .point-text .point-heading {
+  font-weight: 700;
+}
+.why-us .point-text .point-description {
+  font-weight: 400;
+}/*# sourceMappingURL=why-us.css.map */

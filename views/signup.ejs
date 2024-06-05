@@ -6,51 +6,61 @@
 
       <!--=============== REMIXICONS ===============-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
-
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Smart Solar Savings</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
       <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="./css/assets/css/styles.css">
+      <link rel="stylesheet" href="./css/assets/css/signup.css">
 
       <title>SignUp form</title>
    </head>
    <body>
-      <div class="login">
-         <img src="./css/assets/img/login-bg.png" alt="image" class="login__bg">
-
-         <form action="/signup" class="login__form" method="POST">
-            <h1 class="login__title">Login</h1>
-
-            <div class="login__inputs">
-               <div class="login__box">
-                  <input type="text" name="username" placeholder="Username" required class="login__input">
-                  <i class="ri-mail-fill"></i>
-               </div>
-
-               <div class="login__box">
-                <input type="email" name="email" placeholder="Email" required class="login__input">
-                <i class="ri-mail-fill"></i>
+      <main>
+         <div class="form">
+             <div class="heading">
+                 <span>Si</span>gnup
              </div>
-
-               <div class="login__box">
-                  <input type="password" name="password" placeholder="Password" required class="login__input">
-                  <i class="ri-lock-2-fill"></i>
-               </div>
-            </div>
-
-            <!-- <div class="login__check">
-               <div class="login__check-box">
-                  <input type="checkbox" class="login__check-input" id="user-check">
-                  <label for="user-check" class="login__check-label">Remember me</label>
-               </div>
-
-               <a href="#" class="login__forgot">Forgot Password?</a>
-            </div> -->
-
-            <button type="submit" class="login__button">Sign Up</button>
-
-            <!-- <div class="login__register">
-               Don't have an account? <a href="#">Register</a>
-            </div> -->
-         </form>
-      </div>
+             <form action="/signup" class="login__form" method="POST">
+             <div class="inner-form">
+                 <div class="Username input-field">
+                     <span class="label">Create a Username</span>
+                     <span class="icon"><i class="fa-user fa-solid"></i></span>
+                     <input type="text" name="username" required minlength="5">
+                 </div>
+                 <div class="email input-field ">
+                     <span class="label">Enter your email</span>
+                     <span class="icon"><i class="fa-envelope fa-solid"></i></span>
+                     <input type="email" name="email" required minlength="8">
+                 </div>
+                 <div class="password input-field">
+                     <span class="label">Create password</span>
+                     <span class="icon"><i class="fa-lock fa-solid"></i></span>
+                     <input type="password" name="password" required minlength="8">
+                 </div>
+             </div>
+             <div class="login-bttn">
+                 <button> Signup</button>
+             </div>
+             </form>
+ 
+             <div class="signup">
+                 Already have an account?<a href="/login">Login</a>
+             </div>
+             <div class="home">
+                 <a href="index.html">Back</a>
+             </div>
+         </div>
+         <div class="image">
+             <div>
+                 <div class="heading">
+                     "our Journey Begins Here: Rent Cars, Bikes, and Professional Drivers at Your Fingertips"
+                 </div>
+                 <div class="text">Let's get connected</div>
+             </div>
+         </div>
+     </main>
    </body>
 </html>

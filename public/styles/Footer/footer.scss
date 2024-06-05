@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+@mixin blobs ($name, $deg, $x, $y) {
+    width: 100vw;
+    height: 70vh;
+    position: absolute;
+    background-color: var(--theme-color-2);
+    filter: blur(50px);
+
+    transform: rotate($deg) translate($x, $y);
+
+    animation: $name 10s ease-in infinite alternate;
+}
+
+footer {
+    .footer-floating-one {
+        @include blobs(blobOne,-10deg,-30%,-80%)
+    }
+
+    .footer-floating-two {
+        @include blobs(blobTwo,40deg,10%,-100%)
+    }
+
+    .General {
+        .more {
+            p {
+                font-family: "Archivo Black", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
+    }
+
+    .name {
+        p {
+            font-family: "Alfa Slab One", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    }
+}
+
+
+@keyframes blobOne {
+    to {
+        transform: rotate(-20deg) translate(-30%, -70%);
+    }
+}
+
+@keyframes blobTwo {
+    to {
+        transform: rotate(20deg) translate(10%, -110%);
+    }
+}
