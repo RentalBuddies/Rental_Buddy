@@ -11,6 +11,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <title>Rental Buddy</title>
     <link rel="stylesheet" href="styles/Contact-Us/contactus.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("4O6vhrsNH5ZUiGU78");
+        })();
+
+        function SendMail(event) {
+            event.preventDefault();
+
+            var params = {
+                from_name: document.getElementById("fullName").value,
+                email_id: document.getElementById("email_id").value,
+                message: document.getElementById("message").value
+            };
+
+            emailjs.send("service_9go9kn8", "template_ozish0v", params)
+                .then(function (res) {
+                    alert("Success! " + res.status);
+                }).catch(function (error) {
+                    alert("Failed to send the email. Error: " + error);
+                });
+        }
+    </script>
 </head>
 
 <body>
@@ -53,25 +76,24 @@
                         <a href="https://x.com/Unknown_69___"><i class="fa-brands fa-twitter"></i></a>
                         <a href="https://www.instagram.com/hitanshu.bansal45/"><i
                                 class="fa-brands fa-instagram"></i></a>
-                        <a href=" https://www.facebook.com/mudit.arora.58118"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/mudit.arora.58118"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="https://www.linkedin.com/in/mohit-davar-b85958281/"><i
                                 class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </section>
-            <section class="form">
+            <form class="form" onsubmit="SendMail(event)">
                 <div class="heading">Contact us</div>
                 <div class="inner-form">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="number" placeholder="Phone">
-                    <textarea placeholder="Message" rows="3"></textarea>
+                    <input type="text" id="fullName" placeholder="Name" required>
+                    <input type="email" id="email_id" placeholder="Email" required>
+                    <textarea placeholder="Message" id="message" rows="3" required></textarea>
                     <div class="button">
-                        <button>Send</button>
+                        <button type="button" onclick="SendMail(event)">Send</button>
                         <button><a href="/home">Back</a></button>
                     </div>
                 </div>
-            </section>
+            </form>
         </div>
     </main>
 </body>
