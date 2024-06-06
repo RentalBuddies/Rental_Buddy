@@ -17,7 +17,7 @@ const languages = [
 ]
 
 const DelayTime = 1000
-const ChangeTime = 125
+const ChangeTime = 150
 const LoaderTime = 2 * DelayTime + ChangeTime * languages.length
 
 setTimeout(() => {

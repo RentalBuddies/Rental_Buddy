@@ -36,151 +36,162 @@
             <!-- Navbar -->
             <%- include("../includes/nav.ejs") %>
 
-            <!-- User Type Selection  -->
-            <main
-                class="flex flex-col justify-center items-center lg:items-start text-white px-[clamp(15px,10vw,100rem)] py-5 gap-20 min-h-screen"
-                id="category-main">
-                <div class="text text-center lg:text-left">
-                    <h1 class="text-[color:var(--theme-color-2)] text-[clamp(1.5rem,1.5vw,20rem)]">Select what you can
-                        Provide?
-                    </h1>
-                    <p>Please select the option that
-                        best matches the assistance you can provide:
-                    </p>
-                </div>
-                <div class="type-category-container flex self-center justify-between gap-3 flex-wrap w-full">
+                <!-- User Type Selection  -->
+                <main
+                    class="flex flex-col justify-center items-center lg:items-start text-white px-[clamp(15px,10vw,100rem)] py-14 gap-20 min-h-screen"
+                    id="category-main">
+                    <div class="text text-center lg:text-left">
+                        <h1 class="text-[color:var(--theme-color-2)] text-[clamp(1.5rem,1.5vw,20rem)]">Select what you
+                            can
+                            Provide?
+                        </h1>
+                        <p>Please select the option that
+                            best matches the assistance you can provide:
+                        </p>
+                    </div>
+                    <div class="type-category-container flex self-center justify-between gap-3 flex-wrap w-full">
 
-                </div>
-            </main>
+                    </div>
+                </main>
 
-            <!-- Driver Form -->
-            <main class="justify-center items-center pt-12 hidden" id="driver-main">
-                <div
-                    class="form-container bg-white border-2 border-gold w-[80vw] py-10 px-[clamp(10px,3vw,100rem)] flex justify-center items-center flex-col gap-6 relative text-white">
-                    <!-- BG Video -->
-                    <video autoplay muted loop id="myVideo" class="fixed top-0 left-0 min-h-full min-w-full">
-                        <source src="/Images/FormBG.mp4" type="video/mp4">
-                    </video>
-                    <h1 class="text-center text-[color:var(--theme-color-2)] text-2xl z-10">Register Yourself</h1>
-                    <p class="text-center z-10 ">We're excited to have you join our team of professional and reliable
-                        drivers.
-                        By registering with
-                        us, you'll have the opportunity to connect with clients seeking skilled drivers. Please fill out
-                        the form.
-                    </p>
-                    <!-- Form Container -->
-                    <form action="/rentable/driver" class="w-full" method="post">
-                        <!-- Swipper -->
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <!-- Personal Information -->
-                                <div class="swiper-slide personal w-full flex flex-col  py-5 px-6 gap-5">
-                                    <p
-                                        class="text-center text-4xl text-[color:var(--theme-color-2)]  mb-5 underline underline-offset-8 decoration-[color:var(--theme-color-2)]">
-                                        Personal
-                                        Details</p>
-                                    <div class="input-fields">
-                                        <div class="fullname flex justify-between gap-4 mb-5">
-                                            <div class="name w-1/2">
-                                                <label for="driverName"
-                                                    class="block text-[color:var(--theme-color-2)] text-xl mb-1">Name</label>
-                                                <input type="text" name="Name[name]" id="driverName"
-                                                    class="w-full bg-transparent border-2 border-white min-h-10 rounded-3xl outline-none px-5">
-                                            </div>
-                                            <div class="surname w-1/2">
-                                                <label for="driverSurname"
-                                                    class="block text-[color:var(--theme-color-2)] text-xl mb-1">Surname</label>
-                                                <input type="text" name="Name[surname]" id="driverSurname"
-                                                    class="w-full bg-transparent border-2 border-white min-h-10 rounded-3xl outline-none px-5">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Documents -->
-                                <div class="swiper-slide documents w-full flex flex-col bg-green- py-5 px-6 gap-5">
-                                    <p
-                                        class="text-center text-4xl text-[color:var(--theme-color-2)]  mb-5 underline underline-offset-8 decoration-[color:var(--theme-color-2)]">
-                                        Documents
-                                    </p>
-                                    <div class="input-fields">
-
-                                    </div>
-                                    <div class="button flex justify-center">
-                                        <button type="submit" class=" bg-[color:var(--theme-color-2)] px-3 py-2 rounded-3xl text-xl">
-                                            Submit
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </form>
-                </div>
-            </main>
-            
-            <!-- Vehicle Form -->
-            
-            <main class="justify-center items-center pt-12 hidden" id="vehicle-main">
-                <div
-                    class="form-container bg-white border-2 border-gold w-[80vw] py-10 px-[clamp(10px,3vw,100rem)] flex justify-center items-center flex-col gap-6 relative text-white">
-                    <!-- BG Video -->
-                    <video autoplay muted loop id="myVideo" class="fixed top-0 left-0 min-h-full min-w-full">
-                        <source src="/Images/FormBG.mp4" type="video/mp4">
-                    </video>
-                    <h1 class="text-center text-[color:var(--theme-color-2)] text-2xl z-10">Rentout your Vehicle</h1>
-                    <p class="text-center z-10 ">We're delighted you're here to offer your vehicle for rent. By listing your vehicle with us, you'll reach a wide audience of potential renters looking for reliable transportation options. Please complete the form below with your vehicle's details and availability
-                    </p>
-                    <!-- Form Container -->
-                    <form action="/rentable/vehicle" class="w-full" method="post">
-                        <!-- Swipper -->
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-                                <!-- Personal Information -->
-                                <div class="swiper-slide personal w-full flex flex-col  py-5 px-6 gap-5">
-                                    <p
-                                        class="text-center text-4xl text-[color:var(--theme-color-2)]  mb-5 underline underline-offset-8 decoration-[color:var(--theme-color-2)]">
-                                        Personal
-                                        Details</p>
-                                    <div class="input-fields">
-                                        <div class="fullname flex justify-between gap-4 mb-5">
-                                            <div class="name w-1/2">
-                                                <label for="userName"
-                                                    class="block text-[color:var(--theme-color-2)] text-xl mb-1">Name</label>
-                                                <input type="text" name="Name[name]" id="userName"
-                                                    class="w-full bg-transparent border-2 border-white min-h-10 rounded-3xl outline-none px-5">
-                                            </div>
-                                            <div class="surname w-1/2">
-                                                <label for="userSurname"
-                                                    class="block text-[color:var(--theme-color-2)] text-xl mb-1">Surname</label>
-                                                <input type="text" name="Name[surname]" id="userSurname"
-                                                    class="w-full bg-transparent border-2 border-white min-h-10 rounded-3xl outline-none px-5">
+                <!-- Driver Form -->
+                <main class="justify-center items-center pt-12 hidden" id="driver-main">
+                    <div class="form-container lg:bg-transparent  border-2 border-gold w-[80vw] py-10 px-[clamp(10px,3vw,100rem)] flex justify-center items-center flex-col gap-6 relative text-white"
+                        style="background-image: url(Images/FormBGPic.png);">
+                        <!-- BG Video -->
+                        <video autoplay muted loop id="myVideo"
+                            class="hidden lg:block lg:fixed top-0 left-0 min-h-full min-w-full">
+                            <source src="/Images/FormBG.mp4" type="video/mp4">
+                        </video>
+                        <h1 class="text-center text-[color:var(--theme-color-2)] text-2xl z-10">Register Yourself</h1>
+                        <p class="text-center z-10 ">We're excited to have you join our team of professional and
+                            reliable
+                            drivers.
+                            By registering with
+                            us, you'll have the opportunity to connect with clients seeking skilled drivers. Please fill
+                            out
+                            the form.
+                        </p>
+                        <!-- Form Container -->
+                        <form action="" class="w-full">
+                            <!-- Swipper -->
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <!-- Personal Information -->
+                                    <div class="swiper-slide personal w-full flex flex-col  py-5 px-6 gap-5">
+                                        <p
+                                            class="text-center text-4xl text-[color:var(--theme-color-2)]  mb-5 underline underline-offset-8 decoration-[color:var(--theme-color-2)]">
+                                            Personal
+                                            Details</p>
+                                        <div class="input-fields">
+                                            <div class="fullname flex justify-between lg:flex-row flex-col gap-4 mb-5">
+                                                <div class="name lg:w-1/2">
+                                                    <label for="driverName"
+                                                        class="block text-[color:var(--theme-color-2)] text-xl mb-1">Name</label>
+                                                    <input type="text" name="Name[name]" id="driverName"
+                                                        class="w-full bg-transparent border-2 border-white min-h-10 rounded-3xl outline-none px-5">
+                                                </div>
+                                                <div class="surname lg:w-1/2">
+                                                    <label for="driverSurname"
+                                                        class="block text-[color:var(--theme-color-2)] text-xl mb-1">Surname</label>
+                                                    <input type="text" name="Name[surname]" id="driverSurname"
+                                                        class="w-full bg-transparent border-2 border-white min-h-10 rounded-3xl outline-none px-5">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <!-- Documents -->
-                                <div class="swiper-slide documents w-full flex flex-col bg-green- py-5 px-6 gap-5">
-                                    <p
-                                        class="text-center text-4xl text-[color:var(--theme-color-2)]  mb-5 underline underline-offset-8 decoration-[color:var(--theme-color-2)]">
-                                        Documents
-                                    </p>
-                                    <div class="input-fields">
+                                    <!-- Documents -->
+                                    <div class="swiper-slide documents w-full flex flex-col bg-green- py-5 px-6 gap-5">
+                                        <p
+                                            class="text-center text-4xl text-[color:var(--theme-color-2)]  mb-5 underline underline-offset-8 decoration-[color:var(--theme-color-2)]">
+                                            Documents
+                                        </p>
+                                        <div class="input-fields">
 
-                                    </div>
-                                    <div class="button flex justify-center">
-                                        <button type="submit" class=" bg-[color:var(--theme-color-2)] px-3 py-2 rounded-3xl text-xl">
-                                            Submit
-                                        </button>
+                                        </div>
+                                        <div class="button flex justify-center">
+                                            <button type="submit"
+                                                class=" bg-[color:var(--theme-color-2)] px-3 py-2 rounded-3xl text-xl">
+                                                Submit
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="swiper-pagination"></div>
                             </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </form>
-                </div>
-            </main>
+                        </form>
+                    </div>
+                </main>
+
+                <!-- Vehicle Form -->
+
+                <main class="justify-center items-center pt-12 hidden" id="vehicle-main">
+                    <div class="form-container bg-transparent border-2 border-gold w-[80vw] py-10 px-[clamp(10px,3vw,100rem)] flex justify-center items-center flex-col gap-6 relative text-white"
+                        style="background-image: url(Images/FormBGPic.png);">
+                        <!-- BG Video -->
+                        <video autoplay muted loop id="myVideo"
+                            class="hidden lg:block lg:fixed top-0 left-0 min-h-full min-w-full">
+                            <source src="/Images/FormBG.mp4" type="video/mp4">
+                        </video>
+                        <h1 class="text-center text-[color:var(--theme-color-2)] text-2xl z-10">Rentout your Vehicle
+                        </h1>
+                        <p class="text-center z-10 ">We're delighted you're here to offer your vehicle for rent. By
+                            listing your vehicle with us, you'll reach a wide audience of potential renters looking for
+                            reliable transportation options. Please complete the form below with your vehicle's details
+                            and availability
+                        </p>
+                        <!-- Form Container -->
+                        <form action="" class="w-full">
+                            <!-- Swipper -->
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <!-- Personal Information -->
+                                    <div class="swiper-slide personal w-full flex flex-col  py-5 px-6 gap-5">
+                                        <p
+                                            class="text-center text-4xl text-[color:var(--theme-color-2)]  mb-5 underline underline-offset-8 decoration-[color:var(--theme-color-2)]">
+                                            Personal
+                                            Details</p>
+                                        <div class="input-fields">
+                                            <div class="fullname flex flex-col lg:flex-row justify-between gap-4 mb-5">
+                                                <div class="name lg:w-1/2">
+                                                    <label for="userName"
+                                                        class="block text-[color:var(--theme-color-2)] text-xl mb-1">Name</label>
+                                                    <input type="text" name="Name[name]" id="userName"
+                                                        class="w-full bg-transparent border-2 border-white min-h-10 rounded-3xl outline-none px-5">
+                                                </div>
+                                                <div class="surname lg:w-1/2">
+                                                    <label for="userSurname"
+                                                        class="block text-[color:var(--theme-color-2)] text-xl mb-1">Surname</label>
+                                                    <input type="text" name="Name[surname]" id="userSurname"
+                                                        class="w-full bg-transparent border-2 border-white min-h-10 rounded-3xl outline-none px-5">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Documents -->
+                                    <div class="swiper-slide documents w-full flex flex-col bg-green- py-5 px-6 gap-5">
+                                        <p
+                                            class="text-center text-4xl text-[color:var(--theme-color-2)]  mb-5 underline underline-offset-8 decoration-[color:var(--theme-color-2)]">
+                                            Documents
+                                        </p>
+                                        <div class="input-fields">
+
+                                        </div>
+                                        <div class="button flex justify-center">
+                                            <button type="submit"
+                                                class=" bg-[color:var(--theme-color-2)] px-3 py-2 rounded-3xl text-xl">
+                                                Submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </form>
+                    </div>
+                </main>
 
         </div>
     </div>
