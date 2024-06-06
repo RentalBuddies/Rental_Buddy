@@ -80,8 +80,8 @@
             this.door = door
             this.bags = bags
             this.rate = rate
-            this.id = name.replace(/\s+/g, "")
-            this.qty = localStorage.getItem(`${this.id}`) || 0
+            this.id = name.replace(/\s+/g, ""
+            // this.qty = localStorage.getItem(${this.id}) || 0
         }
     }
     //Database of Different Items
@@ -144,7 +144,9 @@
     //Adding Values to Each Card
     Cars.forEach(item => {
         generateCatalogue(item.url, item.model, item.year, item.seats, item.door, item.bags, item.rate)
-    })
+
+    });
+main
 
 </script>
 

@@ -101,7 +101,7 @@ app.get("/login", (req, res) => {
 app.post("/login", passport.authenticate("local", {
   failureRedirect: "/login",
   failureFlash: true,
-}), (req, res) => {
+}),(req, res) => {
   req.flash("success", "Welcome to Wanderlust! You are logged in!");
   res.redirect("/home");
 });
@@ -114,7 +114,7 @@ app.get("/home",(req, res) => {
 });
 
 
-app.get("/rentable",(req ,res)=>{
+app.get("/rentable",isLoggedIn,(req ,res)=>{
   res.render("./frontend/Rentable.ejs");
 });
 
@@ -124,7 +124,7 @@ app.post("/rentable/vehicle",(req,res)=>{
   res.redirect("/home");
 });
 
-app.post("/rentable/driver",(req,res)=>{
+app.post("/rentable/driver",isLoggedIn,(req,res)=>{
   let data = req.body;
   Details.insertMany(data);
   res.redirect("/home");
@@ -134,9 +134,21 @@ app.get("/contactUs",(req,res)=>{
   res.render("./frontend/contactus.ejs");
 });
 
-app.get("/rent",(req,res)=>{
-  res.render("./frontend/Rent.ejs");
+app.get("/rent", isLoggedIn,async (req, res) => {
+  try {
+    let data = await Car.find({});
+    console.log(data);
+    res.render("./frontend/Rent.ejs", { data });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("An error occurred while fetching data");
+  }
 });
+
+app.get("/aboutUs",(req,res)=>{
+  res.render("./frontend/aboutus.ejs");
+
+})
 
 
 
