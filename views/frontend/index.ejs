@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Buddy</title>
+    <title>Rental Buddies</title>
 
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div class="name sm:h-2/3 flex items-end justify-center sm:pb-4 -z-50">
-                    <p class="text-[13vw] text-white">Rental Buddy</p>
+                    <p class="text-[12vw] text-white">Rental Buddies</p>
                 </div>
             </div>
             <div
@@ -108,11 +108,12 @@
             <!-- Navbar -->
             <%- include("../includes/nav.ejs") %>
 
+
             <!-- Main Body -->
             <main class="bg-black overflow-x-hidden relative z-[1] ">
 
                 <!-- Hero Section -->
-                <div class=" hero-section flex flex-col lg:flex-row h-[800px] lg:h-[500px]">
+                <div class=" hero-section flex flex-col lg:flex-row lg:h-[500px]">
                     <!-- Text Side -->
                     <div
                         class="text-container lg:w-1/2 w-full lg:h-full h-1/2 relative flex flex-col gap-4 items-center px-[clamp(10px,5vw,10rem)]">
@@ -143,7 +144,7 @@
                         <div class="button lg:self-start">
                             <button
                                 class="text-lg px-4 py-2 bg-[color:var(--theme-color-2)] text-white rounded-3xl self-start">
-                                <a href="/signup">Discover</a>
+                                <a href="signup-form.html">Discover</a>
                             </button>
                         </div>
                     </div>
@@ -158,9 +159,11 @@
                         </div>
                     </div>
                     <!-- Mobile View or Photo-->
+                    <!--                     
                     <div class="lg:w-1/2 lg:h-full flex-col w-full h-1/2  bg-no-repeat bg-contain bg-center z-10 lg:hidden"
                         style="background-image: url('Images/Hyindaii20.png');">
                     </div>
+                    -->
                 </div>
 
                 <!-- Why Us Section -->
@@ -220,7 +223,10 @@
                         Categories
                     </h1>
                     <div
-                        class="card-container flex flex-wrap px-[clamp(1rem,10vw,100rem)] py-32 gap-10 justify-center items-center">
+                        class="card-container-four flex flex-wrap px-[clamp(1rem,10vw,100rem)] pt-32 gap-10 justify-center items-center">
+                    </div>
+                    <div
+                        class="card-container-two flex flex-wrap px-[clamp(1rem,10vw,100rem)] pb-32 mt-10 gap-10 justify-center items-center">
                     </div>
                 </div>
 
@@ -251,7 +257,7 @@
                             <p>Our Solutions</p>
                         </div>
                     </div>
-                    <div class="faq-container  py-3">
+                    <div class="faq-container px-3 py-3">
                     </div>
                 </div>
             </main>

@@ -3,7 +3,7 @@ const PointContainer = document.querySelector('.points-container')
 function generatePoints(heading, description, iconClass) {
     return (
         PointContainer.innerHTML = PointContainer.innerHTML + `
-        <div class="point flex gap-4 sm:w-[400px] m-2">
+        <div class="point flex gap-4 lg:w-[400px] m-2">
                         <div class="logo-container justify-center items-start ">
                             <div class="point-logo bg-[color:var(--theme-color-2)] w-[50px] aspect-square rounded-full flex justify-center items-center text-white">
                                 <i class=" ${iconClass} text-[clamp(1.25rem,1.75vw,10rem)]"></i>

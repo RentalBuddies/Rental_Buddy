@@ -4,10 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --theme-color-2: #d8ab21
+}
+
 main {
   width: 100vw;
   min-height: 100vh;
-  background: gold;
+  background: var(--theme-color-2);
 
   display: flex;
   justify-content: center;
@@ -34,12 +38,12 @@ main {
 }
 
 .form .heading span {
-  border-bottom: 5px solid gold;
+  border-bottom: 5px solid var(--theme-color-2);
 }
 
 .form .inner-form>div {
   margin-bottom: 10px;
-  border-bottom: 2px solid gold;
+  border-bottom: 2px solid var(--theme-color-2);
   padding: 0px 0px 10px 0px;
 }
 
@@ -74,18 +78,18 @@ main {
 
 .form .inner-form .forgot-password a {
   text-decoration: none;
-  color: gold;
+  color: var(--theme-color-2);
 }
 
 .form .inner-form i {
-  color: gold;
+  color: var(--theme-color-2);
 }
 
 .form .login-bttn button {
   display: block;
   margin: 0px auto;
 
-  background: gold;
+  background: var(--theme-color-2);
   padding-block: 5px;
   width: 80%;
 
@@ -101,7 +105,7 @@ main {
 
 .form .signup a {
   text-decoration: none;
-  color: gold;
+  color: var(--theme-color-2);
 
   margin-left: 10px;
 }
@@ -113,7 +117,7 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(login.svg);
+  background-image: url(/Images/login.svg);
 
   min-width: 300px;
 
@@ -146,7 +150,7 @@ main {
   display: block;
   margin: 0px auto;
 
-  background: gold;
+  background: var(--theme-color-2);
   padding-block: 5px;
   border: 2px solid black;
   width: 20%;
@@ -171,4 +175,10 @@ main {
   .form {
       width: 80vw;
   }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
